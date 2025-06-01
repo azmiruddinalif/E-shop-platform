@@ -5,15 +5,16 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import "./App.css";
-import Home from "./pages/home";
-import Product from "./pages/product";
+import RootLayout from "./layouts/RootLayout";
+import Blog from "./pages/blog";
 import Cart from "./pages/cart";
 import Checkout from "./pages/checkout";
-import Blog from "./pages/blog";
 import Contact from "./pages/contact";
-import RootLayout from "./layouts/RootLayout";
+import Home from "./pages/home";
+import Product from "./pages/product";
 
 function App() {
+  // router initialize
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route>
