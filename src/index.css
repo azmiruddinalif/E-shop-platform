@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"rel="stylesheet");
+@import "tailwindcss";
+
+@theme {
+  --font-poppins: "Poppins", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+  --color-orange: #ff624c;
+  --color-black: #000;
+  --color-white: #ffffff;
+  --color-yellow: #fed550;
+  --color-purple: #1a237b;
+  --color-blue: #00579f;
+  --color-red: #bd0034;
+  --color-black01: #303030;
+  --color-white01: #d9d9d9;
+  --color-purple01: #283b82;
+  --color-blue01: #469bdb;
+  --color-white02: #f4f4f4;
+  --color-black100: #30303038;
+}
+
+/* manuals external css */
+.custom-select .ant-select-selector {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.custom-collapse {
+  background-color: white !important;
+  border: none !important;
+  border-radius: 25px !important;
+  padding: 10px !important;
+  margin-bottom: 20px !important;
+}
+
+.custom-collapse:last-child {
+  margin-bottom: 0px !important;
+}
+
+.custom-collapse .ant-collapse-content {
+  border-top: none !important;
+}
+
+.custom-collapse .ant-collapse-header {
+  display: flex !important;
+  align-items: center !important;
+  column-gap: 32px !important;
+}
+
+.custom-collapse .ant-collapse-expand-icon {
+  width: 32px !important;
+  height: 32px !important;
+  padding-inline-end: 0 !important;
+  background-color: #ff624c !important;
+  border-radius: 50% !important;
+  justify-content: center !important;
+  border: 1px solid transparent !important;
+}
+
+.custom-collapse
+  .ant-collapse-header[aria-expanded="true"]
+  .ant-collapse-expand-icon {
+  background-color: white !important;
+  border-color: #ff624c !important;
+}
+
+.custom-collapse .ant-collapse-header .ant-collapse-expand-icon svg {
+  color: white !important;
+}
+
+.custom-collapse
+  .ant-collapse-header[aria-expanded="true"]
+  .ant-collapse-expand-icon
+  svg {
+  color: #ff624c !important;
+}
+
+.custom-collapse .ant-collapse-header-text {
+  font-family: "Poppins", sans-serif !important;
+  font-size: 24px !important;
+  font-weight: 600 !important;
+  color: #303030 !important;
+}
+
+.custom-collapse .ant-collapse-content-box {
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 20px !important;
+  font-weight: 400 !important;
+  line-height: 30px !important;
+  color: #303030 !important;
+}
