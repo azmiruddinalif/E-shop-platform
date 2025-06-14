@@ -9,7 +9,7 @@ const TechTalks = () => {
   const { pathname } = useLocation();
   return (
     <>
-      <div className="mt-20">
+      <section className="mt-20">
         <div className="flex  justify-between">
           <div>
             <h3 className="font-poppins text-[36px] font-semibold text-black01">
@@ -35,7 +35,7 @@ const TechTalks = () => {
             <BlogCard pathname={pathname} {...blog} />
           ))}
         </div>
-      </div>
+      </section>
     </>
   );
 };

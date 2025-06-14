@@ -11,12 +11,14 @@
   --color-purple: #1a237b;
   --color-blue: #00579f;
   --color-red: #bd0034;
+  --color-gray: #c4c4c4;
   --color-black01: #303030;
   --color-white01: #d9d9d9;
   --color-purple01: #283b82;
   --color-blue01: #469bdb;
   --color-white02: #f4f4f4;
   --color-black100: #30303038;
+  --color-black200: #828282;
 }
 
 /* manuals external css */
