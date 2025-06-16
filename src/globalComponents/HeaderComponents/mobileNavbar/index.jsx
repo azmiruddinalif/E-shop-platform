@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import { Logo } from "../../../assets/svg/Logo";
 import Container from "../../Container";
 import CustomDrawer from "../../drawer";
+import SocialsWithLang from "../topbar/SocialsWithLang";
+import NavListItems from "./NavListItems";
 
 const MobileNavbar = () => {
   const [open, setOpen] = useState(false);
@@ -41,9 +43,13 @@ const MobileNavbar = () => {
         placement="left"
         closable="true"
         rootClassName="custom_drawer"
-        title=""
+        title={
+          <div>
+            <SocialsWithLang />
+          </div>
+        }
       >
-        <h1>this is azmir uddin alif</h1>
+        <NavListItems />
       </CustomDrawer>
     </>
   );
