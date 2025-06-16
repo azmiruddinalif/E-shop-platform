@@ -98,3 +98,13 @@
   line-height: 30px !important;
   color: #303030 !important;
 }
+
+.custom_drawer .ant-drawer-close {
+  position: absolute;
+  top: 15px;
+  right: 0;
+}
+
+.custom_drawer .ant-drawer-header {
+  border-bottom: none !important;
+}
