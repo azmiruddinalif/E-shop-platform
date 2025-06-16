@@ -19,6 +19,13 @@
   --color-white02: #f4f4f4;
   --color-black100: #30303038;
   --color-black200: #828282;
+  --breakpoint-xs: 320px;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-2xl: 1400px;
+  --breakpoint-3xl: 1700px;
 }
 
 /* manuals external css */

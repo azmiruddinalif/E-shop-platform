@@ -10,7 +10,7 @@ export const SpringSaleData = [
     price: 1121.53,
     discount: 51,
     stock: 1500,
-    sold: 100,
+    sold: 1000,
   },
   {
     id: 2,
