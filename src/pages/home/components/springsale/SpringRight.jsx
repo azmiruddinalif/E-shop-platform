@@ -8,9 +8,11 @@ import { SpringSaleData } from "./SpringSaleData";
 const breakpoints = {
   320: {
     slidesPerView: 1,
+    spaceBetween: 10,
   },
   576: {
     slidesPerView: 2,
+    spaceBetween: 10,
   },
   768: {
     slidesPerView: 2,

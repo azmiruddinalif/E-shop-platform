@@ -8,7 +8,7 @@ const SpringLeft = () => {
   return (
     <>
       <div>
-        <h3 className="font-poppins font-bold text-2xl lg:text-[56px] text-black01">
+        <h3 className="font-poppins font-bold text-2xl md:text-[56px] text-black01">
           {t("Spring Sale")}
         </h3>
         <div className="mt-5">

@@ -105,6 +105,16 @@
   right: 0;
 }
 
+@media (min-width: 576px) and (max-width: 767px) {
+  .custom-collapse .ant-collapse-header-text {
+    font-size: 18px !important;
+  }
+
+  .custom-collapse .ant-collapse-content-box {
+    font-size: 14px !important;
+    line-height: 24px !important;
+  }
+}
 @media (max-width: 575px) {
   .custom-collapse .ant-collapse-header-text {
     font-size: 15px !important;

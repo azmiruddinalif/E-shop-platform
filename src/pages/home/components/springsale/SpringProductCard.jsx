@@ -36,7 +36,7 @@ const SpringProductCard = ({
           </div>
         )}
         <div className="mt-10">
-          <h6 className="font-montserrat text-sm font-normal text-black01 uppercase tracking-[5px]">
+          <h6 className="font-montserrat text-xs lg:text-sm font-normal text-black01 uppercase tracking-normal lg:tracking-[5px]">
             {pCategory}
           </h6>
           {pName?.length > 20 ? (
@@ -51,7 +51,7 @@ const SpringProductCard = ({
             >
               <Link
                 to="/product"
-                className="font-poppins text-xl font-semibold text-black01 truncate"
+                className="font-poppins text-base lg:text-xl font-semibold text-black01 truncate"
               >
                 {pName}
               </Link>
@@ -59,7 +59,7 @@ const SpringProductCard = ({
           ) : (
             <Link
               to="/product"
-              className="font-poppins text-xl font-semibold text-black01 truncate group-hover:text-orange transition-all ease-linear duration-100"
+              className="font-poppins text-base lg:text-xl font-semibold text-black01 truncate group-hover:text-orange transition-all ease-linear duration-100"
             >
               {pName}
             </Link>
@@ -71,7 +71,7 @@ const SpringProductCard = ({
             </span>
           </div>
           <div className="flex items-center gap-x-2 mt-2">
-            <p className="font-poppins text-2xl font-semibold text-black01 group-hover:text-orange transition-all ease-linear duration-100">
+            <p className="font-poppins text-lg lg:text-2xl font-semibold text-black01 group-hover:text-orange transition-all ease-linear duration-100">
               ${getDiscountedPrice(price, discount)}
             </p>
             {discount && (

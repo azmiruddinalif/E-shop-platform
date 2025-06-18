@@ -38,7 +38,7 @@ const FeaturedProducts = () => {
       <Container>
         <div className="relative">
           <div className="flex items-center justify-between mb-5 lg:mb-0">
-            <h3 className="font-poppins text-lg lg:text-[36px] font-semibold text-black01">
+            <h3 className="font-poppins text-lg md:text-[36px] font-semibold text-black01">
               {t("Featured_Products")}
             </h3>
             <Link

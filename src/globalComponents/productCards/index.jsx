@@ -46,7 +46,7 @@ const ProductCard = ({
           </div>
         )}
         <div>
-          <h6 className="font-montserrat text-sm font-normal text-black01 uppercase tracking-[5px]">
+          <h6 className="font-montserrat text-sm font-normal text-black01 uppercase tracking-normal lg:tracking-[5px]">
             {pCategory}
           </h6>
           {pName?.length > 20 ? (

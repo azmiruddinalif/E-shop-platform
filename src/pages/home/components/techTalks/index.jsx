@@ -12,7 +12,7 @@ const TechTalks = () => {
       <section className="mt-20">
         <div className="flex  justify-between">
           <div className="w-[70%] lg:w-fit">
-            <h3 className="font-poppins text-lg lg:text-[36px] font-semibold text-black01">
+            <h3 className="font-poppins text-lg md:text-[36px] font-semibold text-black01">
               {t("Tech Talk")}
             </h3>
             <p className="font-montserrat font-normal text-sm lg:text-xl text-black01 mt-1 lg:mt-4">
@@ -30,7 +30,7 @@ const TechTalks = () => {
             </span>
           </Link>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-y-10 lg:gap-x-10 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 md:gap-x-5 lg:gap-x-10 mt-12">
           {TechTalksData.slice(0, 3).map((blog) => (
             <BlogCard pathname={pathname} {...blog} />
           ))}

@@ -19,7 +19,7 @@ const NewProducts = () => {
       <Container>
         <div className="relative">
           <div className="flex items-center justify-between">
-            <h3 className="font-poppins text-lg lg:text-[36px] font-semibold text-black01">
+            <h3 className="font-poppins text-lg md:text-[36px] font-semibold text-black01">
               {t("New_Products")}
             </h3>
             <div className="flex items-center gap-x-2 w-[50%] justify-end">
