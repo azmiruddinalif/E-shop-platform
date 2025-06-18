@@ -6,7 +6,7 @@ const Overview = () => {
   return (
     <section className="mt-[80px]">
       <Container>
-        <div className="grid grid-cols-[auto_auto] gap-x-5">
+        <div className="grid grid-cols-1 lg:grid-cols-[auto_auto] gap-y-5 lg:gap-x-5">
           <img
             src={overView01}
             alt="over view"

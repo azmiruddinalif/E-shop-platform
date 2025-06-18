@@ -9,13 +9,13 @@ const BestsellerLft = () => {
   return (
     <>
       <div>
-        <div className="flex items-center justify-between mb-12">
-          <h3 className="font-poppins text-[36px] font-semibold text-black01">
+        <div className="flex items-center justify-between mb-3 lg:mb-12">
+          <h3 className="font-poppins text-lg lg:text-[36px] font-semibold text-black01">
             {t("Best seller")}
           </h3>
           <Link
             to="/product"
-            className="flex items-center gap-x-2 font-montserrat font-bold text-base text-orange group"
+            className="flex items-center gap-x-2 font-montserrat font-bold text-sm lg:text-base text-orange group"
           >
             {t("View_All")}{" "}
             <span className="group-hover:translate-x-2 transition-transform duration-300">
@@ -23,7 +23,7 @@ const BestsellerLft = () => {
             </span>
           </Link>
         </div>
-        <div className="grid grid-cols-3 gap-2">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-2">
           {FeaturedProductsData?.slice(0, 6).map((product) => (
             <ProductCard
               key={product.id}
