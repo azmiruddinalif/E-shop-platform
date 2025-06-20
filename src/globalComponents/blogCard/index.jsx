@@ -8,7 +8,7 @@ const BlogCard = ({ pathname, ...props }) => {
   const HomePageCard = () =>
     isHomePage && (
       <>
-        <div className="border border-transparent hover:border-black100 hover:p-[20px] hover:lg:p-[45px] hover:rounded-[25px] transition-all duration-300">
+        <div className="border border-transparent hover:border-black100 hover:p-[20px] hover:xl:p-[45px] hover:rounded-[25px] transition-all duration-300">
           <div className="max-h-[406px] bg-amber-400 rounded-[25px] overflow-hidden">
             <img
               src={image}
@@ -17,7 +17,7 @@ const BlogCard = ({ pathname, ...props }) => {
             />
           </div>
           <div className="mt-8">
-            <h5 className="font-poppins font-semibold text-lg lg:text-[24px] text-black01">
+            <h5 className="font-poppins font-semibold text-lg xl:text-[24px] text-black01">
               {title}
             </h5>
             <div className="flex items-center justify-between mt-8">

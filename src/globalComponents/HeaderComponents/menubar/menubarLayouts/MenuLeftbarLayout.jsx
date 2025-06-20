@@ -6,7 +6,7 @@ const MenuLeftbarLayout = () => {
   const { t } = useTranslation();
   return (
     <>
-      <div className="flex items-center gap-x-20">
+      <div className="flex items-center gap-x-10 xl:gap-x-20">
         <AllCategoryMenu
           isMenu={true}
           className="font-montserrat font-bold text-base text-white cursor-pointer flex items-center gap-x-3"

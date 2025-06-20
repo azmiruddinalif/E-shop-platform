@@ -35,7 +35,7 @@ const NewProducts = () => {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-x-5 gap-y-10 mt-[30px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-x-5 gap-y-10 mt-[30px]">
           {FeaturedProductsData?.slice(0, initialData)?.map((product) => (
             <ProductCard
               key={product.id}

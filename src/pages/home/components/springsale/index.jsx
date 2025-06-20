@@ -11,7 +11,7 @@ const SpringSale = () => {
             <div className="w-full lg:w-[35%]">
               <SpringLeft />
             </div>
-            <div className="w-full lg:w-[55%] mt-5 lg:mt-0">
+            <div className="w-full lg:w-[45%] xl:w-[55%] mt-5 lg:mt-0">
               <SpringRight />
             </div>
           </div>

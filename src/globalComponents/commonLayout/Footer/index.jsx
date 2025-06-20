@@ -37,7 +37,7 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-2 mt-5 lg:mt-0">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-1 xl:gap-x-2 mt-5 lg:mt-0">
             {footerLinkList.map((item, index) => {
               const linkLists = item.linkTitle;
               return (
@@ -49,7 +49,7 @@ const Footer = () => {
                     return (
                       <div key={data.linkTopic} className=" mt-[24px]">
                         <ul>
-                          <li className="font-montserrat font-normal text-base text-black200 hover:text-orange transition-all ease-linear duration-75">
+                          <li className="font-montserrat font-normal text-sm xl:text-base text-black200 hover:text-orange transition-all ease-linear duration-75">
                             <Link to={data.to}>{data.linkTopic}</Link>
                           </li>
                         </ul>
@@ -65,10 +65,18 @@ const Footer = () => {
                   Payments
                 </h4>
                 <div className="flex justify-between items-center gap-x-2 mt-[24px]">
-                  <img src={visa} alt="visa" />
-                  <img src={masterCard} alt="masterCard" />
-                  <img src={applePay} alt="applePay" />
-                  <img src={paypal} alt="paypal" />
+                  <div className="w-[25%] xl:w-fit">
+                    <img src={visa} alt="visa" />
+                  </div>
+                  <div className="w-[25%] xl:w-fit">
+                    <img src={masterCard} alt="masterCard" />
+                  </div>
+                  <div className="w-[25%] xl:w-fit">
+                    <img src={applePay} alt="applePay" />
+                  </div>
+                  <div className="w-[25%] xl:w-fit">
+                    <img src={paypal} alt="paypal" />
+                  </div>
                 </div>
               </div>
               <div className="mt-[73px]">
