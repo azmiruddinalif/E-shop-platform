@@ -28,10 +28,10 @@ const breakpoints = {
 const SpringRight = () => {
   return (
     <div className="relative">
-      <div className="absolute top-2/4 -translate-y-2/4 right-0 xl:-right-5 z-30 swiper-button-next-spring">
+      <div className="absolute top-2/4 -translate-y-2/4 right-0 3xl:-right-5 z-30 swiper-button-next-spring">
         <NextButton />
       </div>
-      <div className="absolute top-2/4 -translate-y-2/4 left-0 xl:-left-5 z-30 swiper-button-prev-spring">
+      <div className="absolute top-2/4 -translate-y-2/4 left-0 3xl:-left-5 z-30 swiper-button-prev-spring">
         <PrevButton />
       </div>
       <Swiper

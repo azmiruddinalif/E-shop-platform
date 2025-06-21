@@ -65,16 +65,16 @@ const Footer = () => {
                   Payments
                 </h4>
                 <div className="flex justify-between items-center gap-x-2 mt-[24px]">
-                  <div className="w-[25%] xl:w-fit">
+                  <div className="w-[25%] 2xl:w-fit">
                     <img src={visa} alt="visa" />
                   </div>
-                  <div className="w-[25%] xl:w-fit">
+                  <div className="w-[25%] 2xl:w-fit">
                     <img src={masterCard} alt="masterCard" />
                   </div>
-                  <div className="w-[25%] xl:w-fit">
+                  <div className="w-[25%] 2xl:w-fit">
                     <img src={applePay} alt="applePay" />
                   </div>
-                  <div className="w-[25%] xl:w-fit">
+                  <div className="w-[25%] 2xl:w-fit">
                     <img src={paypal} alt="paypal" />
                   </div>
                 </div>

@@ -8,7 +8,7 @@ const BlogCard = ({ pathname, ...props }) => {
   const HomePageCard = () =>
     isHomePage && (
       <>
-        <div className="border border-transparent hover:border-black100 hover:p-[20px] hover:xl:p-[45px] hover:rounded-[25px] transition-all duration-300">
+        <div className="border border-transparent hover:border-black100 hover:p-[20px] hover:3xl:p-[45px] hover:rounded-[25px] transition-all duration-300">
           <div className="max-h-[406px] bg-amber-400 rounded-[25px] overflow-hidden">
             <img
               src={image}
