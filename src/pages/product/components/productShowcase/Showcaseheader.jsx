@@ -1,0 +1,74 @@
+import { HiBars3 } from "react-icons/hi2";
+import { useDispatch, useSelector } from "react-redux";
+import { QubeIcon } from "../../../../assets/svg/QubeIcon";
+import AllCategoryMenu from "../../../../globalComponents/HeaderComponents/menubar/AllCategories";
+import {
+  setGridView,
+  setListView,
+} from "../../../../service/redux/feature/viewSlice";
+
+const Showcaseheader = () => {
+  const dispatch = useDispatch();
+  const viewMode = useSelector((state) => state.view.mode);
+
+  return (
+    <>
+      <div>
+        <h1 className="font-montserrat text-[36px] font-bold text-black">
+          Products
+        </h1>
+        <div className="flex items-center justify-between mt-6">
+          <p className="font-montserrat text-base text-black01">
+            Showing 1 - 16 of 160 results.
+          </p>
+          <div className="flex">
+            <div className="flex items-center gap-x-2 justify-end mr-3">
+              <span className="font-montserrat font-normal text-sm lg:text-base">
+                Sort By:
+              </span>
+              <div className="w-fit">
+                <AllCategoryMenu
+                  className="font-montserrat font-bold text-sm lg:text-base text-orange cursor-pointer w-full flex justify-between items-center"
+                  icons={true}
+                />
+              </div>
+            </div>
+            <div className="w-[1px] h-[20px] bg-black100" />
+            <div className="flex items-center gap-x-2 justify-end mx-3">
+              <span className="font-montserrat font-normal text-sm lg:text-base">
+                Sort By:
+              </span>
+              <div className="w-fit">
+                <AllCategoryMenu
+                  className="font-montserrat font-bold text-sm lg:text-base text-orange cursor-pointer w-full flex justify-between items-center"
+                  icons={true}
+                />
+              </div>
+            </div>
+            <div className="w-[1px] h-[20px] bg-black100" />
+            <div className="flex items-center ml-3 gap-x-2">
+              <span
+                className={`cursor-pointer hover:text-orange ${
+                  viewMode == "grid" ? "text-orange" : ""
+                }`}
+                onClick={() => dispatch(setGridView())}
+              >
+                <QubeIcon />
+              </span>
+              <span
+                className={`cursor-pointer hover:text-orange ${
+                  viewMode == "list" ? "text-orange" : ""
+                }`}
+                onClick={() => dispatch(setListView())}
+              >
+                <HiBars3 size={30} />
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Showcaseheader;

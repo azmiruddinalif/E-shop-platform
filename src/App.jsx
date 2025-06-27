@@ -12,6 +12,7 @@ import Checkout from "./pages/checkout";
 import Contact from "./pages/contact";
 import Home from "./pages/home";
 import Product from "./pages/product";
+import SingleProducts from "./pages/product/components/singleProducs";
 
 function App() {
   // router initialize
@@ -21,6 +22,7 @@ function App() {
         <Route element={<RootLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/product" element={<Product />} />
+          <Route path="/product/:id" element={<SingleProducts />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/blog" element={<Blog />} />

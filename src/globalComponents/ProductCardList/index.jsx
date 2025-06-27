@@ -6,8 +6,7 @@ import { Link } from "react-router-dom";
 import { getStars } from "../../utils/generateRating";
 import { getDiscountedPrice } from "../../utils/getDiscountPrice";
 
-const ProductCard = ({
-  id,
+const ProductCardList = ({
   image,
   pCategory,
   pName,
@@ -16,38 +15,16 @@ const ProductCard = ({
   price,
   discount,
 }) => {
-  // const removedSpaceName = pName.replace(/\s/g, "");
-
   return (
     <>
-      <div className="relative group border border-transparent hover:border-black100 p-6 rounded-[10px] lg:w-[285px]">
-        <div className=" w-full h-[214px] overflow-hidden rounded-[10px]">
+      <div className="relative group border border-transparent hover:border-black100 p-6 rounded-[10px] grid grid-cols-[0.8fr_2fr_1fr]">
+        <div className=" w-[200px] h-[200px] overflow-hidden rounded-[10px] border border-black100">
           <img
             src={image}
             alt="p-image"
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="absolute top-[40%] left-2/4 -translate-x-2/4 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all ease-linear duration-100">
-          <div className="flex items-center gap-x-3">
-            <div className="w-[50px] h-[50px] cursor-pointer rounded-full bg-white border border-orange flex items-center justify-center text-orange hover:bg-orange hover:text-white">
-              <FaOpencart />
-            </div>
-            <div className="w-[50px] h-[50px] cursor-pointer rounded-full bg-white border border-orange flex items-center justify-center text-orange hover:bg-orange hover:text-white">
-              <FiHeart />
-            </div>
-            <div className="w-[50px] h-[50px] cursor-pointer rounded-full bg-white border border-orange flex items-center justify-center text-orange hover:bg-orange hover:text-white">
-              <IoShareSocialOutline />
-            </div>
-          </div>
-        </div>
-        {discount && (
-          <div className="absolute top-2 right-5 w-fit py-1.5 px-5 bg-orange rounded-[5px]">
-            <span className="text-white font-montserrat font-bold text-base">
-              {discount}%
-            </span>
-          </div>
-        )}
         <div>
           <h6 className="font-montserrat text-sm font-normal text-black01 uppercase tracking-normal lg:tracking-[5px]">
             {pCategory}
@@ -63,7 +40,7 @@ const ProductCard = ({
               }
             >
               <Link
-                to={`/product/${id}`}
+                to="/product"
                 className="font-poppins text-xl font-semibold text-black01 truncate"
               >
                 {pName}
@@ -71,7 +48,7 @@ const ProductCard = ({
             </Tooltip>
           ) : (
             <Link
-              to={`/product/${id}`}
+              to="/product"
               className="font-poppins text-xl font-semibold text-black01 truncate group-hover:text-orange transition-all ease-linear duration-100"
             >
               {pName}
@@ -83,6 +60,26 @@ const ProductCard = ({
               ({totalRatings})
             </span>
           </div>
+          <div className="mt-3">
+            <div className="flex items-center gap-x-3">
+              <div className="w-[50px] h-[50px] cursor-pointer rounded-full bg-white border border-orange flex items-center justify-center text-orange hover:bg-orange hover:text-white">
+                <FaOpencart />
+              </div>
+              <div className="w-[50px] h-[50px] cursor-pointer rounded-full bg-white border border-orange flex items-center justify-center text-orange hover:bg-orange hover:text-white">
+                <FiHeart />
+              </div>
+              <div className="w-[50px] h-[50px] cursor-pointer rounded-full bg-white border border-orange flex items-center justify-center text-orange hover:bg-orange hover:text-white">
+                <IoShareSocialOutline />
+              </div>
+            </div>
+          </div>
+          {discount && (
+            <div className="absolute top-2 right-5 w-fit py-1.5 px-5 bg-orange rounded-[5px]">
+              <span className="text-white font-montserrat font-bold text-base">
+                {discount}%
+              </span>
+            </div>
+          )}
           <div className="flex items-center gap-x-2 mt-2">
             <p className="font-poppins text-2xl font-semibold text-black01 group-hover:text-orange transition-all ease-linear duration-100">
               ${getDiscountedPrice(price, discount)}
@@ -99,4 +96,4 @@ const ProductCard = ({
   );
 };
 
-export default ProductCard;
+export default ProductCardList;

@@ -5,7 +5,7 @@ import Price from "./filterCategories/Price";
 const LeftProductComponents = () => {
   return (
     <>
-      <div className="bg-white02 p-[48px] rounded-lg">
+      <div className="bg-white02 p-[48px] rounded-lg h-fit">
         <Categories />
         <hr className="w-full text-black100" />
         <Brands />

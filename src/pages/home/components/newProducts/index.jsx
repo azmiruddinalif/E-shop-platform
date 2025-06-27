@@ -39,6 +39,7 @@ const NewProducts = () => {
           {FeaturedProductsData?.slice(0, initialData)?.map((product) => (
             <ProductCard
               key={product.id}
+              id={product.id}
               image={product?.image}
               ratings={product.ratings}
               pCategory={product.pCategory}
