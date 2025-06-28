@@ -12,6 +12,7 @@ const ShowcaseBody = () => {
           {FeaturedProductsData?.slice(0, 20)?.map((product) => (
             <ProductCard
               key={product.id}
+              id={product.id}
               image={product?.image}
               ratings={product.ratings}
               pCategory={product.pCategory}

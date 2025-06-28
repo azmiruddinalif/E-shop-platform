@@ -16,6 +16,8 @@ const ProductCard = ({
   price,
   discount,
 }) => {
+  console.log(id);
+
   // const removedSpaceName = pName.replace(/\s/g, "");
 
   return (
