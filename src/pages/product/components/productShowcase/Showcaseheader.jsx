@@ -10,6 +10,7 @@ import {
 const Showcaseheader = () => {
   const dispatch = useDispatch();
   const viewMode = useSelector((state) => state.view.mode);
+  const { from, to, total } = useSelector((state) => state.pagination);
 
   return (
     <>
@@ -19,7 +20,7 @@ const Showcaseheader = () => {
         </h1>
         <div className="flex items-center justify-between mt-6">
           <p className="font-montserrat text-base text-black01">
-            Showing 1 - 16 of 160 results.
+            Showing {from} - {to} of {total} results.
           </p>
           <div className="flex">
             {/* <div className="flex items-center gap-x-2 justify-end mr-3">

@@ -125,3 +125,7 @@
     line-height: 24px !important;
   }
 }
+
+.ant-pagination-item {
+  border: none !important;
+}

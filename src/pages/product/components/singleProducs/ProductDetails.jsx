@@ -1,3 +1,4 @@
+import ReactImageMagnify from "react-image-magnify";
 import { getStars } from "../../../../utils/generateRating";
 import { getDiscountedPrice } from "../../../../utils/getDiscountPrice";
 
@@ -18,8 +19,30 @@ const ProductDetails = ({
     <>
       <div>
         <div className="grid grid-cols-[2fr_1.5fr] gap-x-8">
-          <div className="border border-black200 rounded-lg overflow-hidden h-[500px]">
-            <img src={image} alt="" className="w-full h-full object-contain" />
+          <div className="relative w-full h-[500px] overflow-visible rounded-xl border border-gray flex items-center justify-center">
+            <ReactImageMagnify
+              {...{
+                smallImage: {
+                  alt: "Wristwatch by Ted Baker London",
+                  isFluidWidth: false,
+                  src: image,
+                  width: 450,
+                  height: 450,
+                },
+                largeImage: {
+                  src: image,
+                  width: 1200,
+                  height: 1800,
+                },
+                enlargedImageContainerStyle: {
+                  zIndex: 1000,
+                },
+                isHintEnabled: true,
+                enlargedImagePosition: "beside",
+                shouldUsePositiveSpaceLens: true,
+              }}
+            />
+            {/* <img src={image} alt="" className="w-full h-full object-contain" /> */}
           </div>
           <div>
             <div className="flex items-center gap-x-2 mt-2">
