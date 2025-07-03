@@ -1,8 +1,17 @@
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
 import Container from "../../../../globalComponents/Container";
+import {
+  setCountReset,
+  setCountValue,
+} from "../../../../service/redux/feature/counterSlice";
 import { FeaturedProductsData } from "../../../home/components/featuredProducts/featuredData";
 import CheckoutCount from "./CheckoutCount";
+import ProductDescription from "./ProductDescription";
 import ProductDetails from "./ProductDetails";
+import RelatedProducts from "./RelatedProducts";
+import SingleProductCta from "./SingleProductCta";
 
 const SingleProducts = () => {
   const { pathname } = useLocation();
@@ -22,8 +31,25 @@ const SingleProducts = () => {
     weight,
     delivery,
     variant,
+    description,
   } = singleProduct;
-  console.log(singleProduct);
+  const dispatch = useDispatch();
+  const cart = useSelector((state) => state.cart.items);
+
+  const relatedProducts = FeaturedProductsData.filter(
+    (product) =>
+      product.pCategory.toLowerCase() ===
+        singleProduct.pCategory.toLowerCase() && product.id !== singleProduct.id
+  );
+
+  useEffect(() => {
+    const cartItems = cart.find((item) => item.id === singleProduct.id);
+    if (cartItems) {
+      dispatch(setCountValue(cartItems.qty));
+    } else {
+      dispatch(setCountReset());
+    }
+  }, [dispatch, singleProduct.id]);
 
   return (
     <>
@@ -54,7 +80,16 @@ const SingleProducts = () => {
             />
           </div>
           <div className="mt-[48px]">
-            <CheckoutCount />
+            <CheckoutCount singleProduct={singleProduct} />
+          </div>
+          <div className="mt-[48px]">
+            <ProductDescription description={description} />
+          </div>
+          <div className="mt-[48px]">
+            <RelatedProducts relatedProducts={relatedProducts} />
+          </div>
+          <div className="mt-[48px]">
+            <SingleProductCta />
           </div>
         </div>
       </Container>

@@ -1,9 +1,8 @@
 import { useTranslation } from "react-i18next";
-import CommonButton from "../../../globalComponents/CommonButton";
+import subscribeImage from "../../../../assets/images/subscribe.png";
+import CommonButton from "../../../../globalComponents/CommonButton";
 
-import subscribeImage from "../../../assets/images/subscribe.png";
-
-const ContactCta = () => {
+const SingleProductCta = () => {
   const { t } = useTranslation();
   return (
     <div>
@@ -40,4 +39,4 @@ const ContactCta = () => {
   );
 };
 
-export default ContactCta;
+export default SingleProductCta;

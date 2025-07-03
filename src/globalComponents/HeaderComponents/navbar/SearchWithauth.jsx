@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { CiSearch } from "react-icons/ci";
 import { FaOpencart } from "react-icons/fa";
 import { LuUserRound } from "react-icons/lu";
+import { Link } from "react-router-dom";
 
 const SearchWithauth = () => {
   const { t } = useTranslation();
@@ -15,10 +16,10 @@ const SearchWithauth = () => {
         />
         <CiSearch size={20} />
       </div>
-      <div className="flex items-center gap-x-5">
+      <Link to="/cart" className="flex items-center gap-x-5">
         <div className="relative">
           <FaOpencart size={25} />
-          <span className="absolute -top-2 right-0 w-1.5 h-1.5 bg-orange rounded-full"></span>
+          {/* <span className="absolute -top-2 right-0 w-1.5 h-1.5 bg-orange rounded-full"></span> */}
         </div>
         <div>
           <h6 className="font-montserrat text-base text-black01">
@@ -28,7 +29,7 @@ const SearchWithauth = () => {
             $150,00
           </span>
         </div>
-      </div>
+      </Link>
       <div className="w-[1px] h-[32px] bg-black100"></div>
       <div className="flex items-center gap-x-5">
         <div>

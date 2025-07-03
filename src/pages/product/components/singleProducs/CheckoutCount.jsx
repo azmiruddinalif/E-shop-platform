@@ -2,17 +2,25 @@ import { AiOutlineMinus } from "react-icons/ai";
 import { FaOpencart } from "react-icons/fa";
 import { FiPlus } from "react-icons/fi";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import CommonButton from "../../../../globalComponents/CommonButton";
+import { addCart } from "../../../../service/redux/feature/cartSlice";
 import {
   setCountDec,
   setCountInc,
 } from "../../../../service/redux/feature/counterSlice";
 import { supportData } from "../../../home/components/support/supportData";
 
-const CheckoutCount = () => {
+const CheckoutCount = ({ singleProduct }) => {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const countValue = useSelector((count) => count.count.count);
   const disableWhenLessThanOne = countValue === 1;
+
+  const handleAddToCartAndRedirect = () => {
+    dispatch(addCart({ product: singleProduct, qty: countValue }));
+    navigate("/cart");
+  };
 
   return (
     <>
@@ -63,9 +71,12 @@ const CheckoutCount = () => {
                   Buy Now
                 </span>
               </CommonButton>
-              <div className="w-[49px] h-[49px] rounded-md flex items-center justify-center border border-orange">
+              <button
+                onClick={handleAddToCartAndRedirect}
+                className="w-[49px] h-[49px] rounded-md flex items-center justify-center border border-orange"
+              >
                 <FaOpencart color="#FF624C" size={25} />
-              </div>
+              </button>
             </div>
           </div>
         </div>
