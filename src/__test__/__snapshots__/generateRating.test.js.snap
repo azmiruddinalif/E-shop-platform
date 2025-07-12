@@ -1,0 +1,33 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should getting rate of users 1`] = `
+<div
+  className="flex items-center gap-x-1"
+>
+  <span
+    className="text-yellow"
+  >
+    <FaStar />
+  </span>
+  <span
+    className="text-yellow"
+  >
+    <FaStar />
+  </span>
+  <span
+    className="text-yellow"
+  >
+    <FaStar />
+  </span>
+  <span
+    className="text-yellow"
+  >
+    <FaStar />
+  </span>
+  <span
+    className="text-yellow"
+  >
+    <FaRegStarHalfStroke />
+  </span>
+</div>
+`;

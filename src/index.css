@@ -129,3 +129,11 @@
 .ant-pagination-item {
   border: none !important;
 }
+
+.custom-form .ant-form-item-row {
+  flex-direction: column !important;
+}
+
+.custom-form .ant-form-item-label {
+  text-align: start !important;
+}

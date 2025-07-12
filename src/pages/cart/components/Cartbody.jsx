@@ -1,13 +1,19 @@
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import ProductCarts from "./ProductCarts";
 
 const Cartbody = () => {
   const cartItems = useSelector((state) => state.cart.items);
+  const navigate = useNavigate();
   const subTotal = cartItems.reduce(
     (acc, crnt) => acc + crnt.price * crnt.qty,
     0
   );
   console.log(cartItems);
+
+  let handleRedirectOrder = () => {
+    navigate("/checkout");
+  };
 
   return (
     <>
@@ -79,8 +85,11 @@ const Cartbody = () => {
             Continue Shopping
           </button>
 
-          <button className="bg-orange text-white px-6 py-3 rounded-md font-semibold">
-            Update Cart
+          <button
+            onClick={handleRedirectOrder}
+            className="bg-orange text-white px-6 py-3 rounded-md font-semibold cursor-pointer"
+          >
+            Order products
           </button>
         </div>
       </div>
