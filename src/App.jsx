@@ -13,6 +13,7 @@ import Contact from "./pages/contact";
 import Home from "./pages/home";
 import Product from "./pages/product";
 import SingleProducts from "./pages/product/components/singleProducs";
+import Registration from "./pages/registration";
 
 function App() {
   // router initialize
@@ -20,6 +21,7 @@ function App() {
     createRoutesFromElements(
       <Route>
         <Route element={<RootLayout />}>
+          <Route path="/sign-up" element={<Registration />} />
           <Route path="/" element={<Home />} />
           <Route path="/product" element={<Product />} />
           <Route path="/product/:id" element={<SingleProducts />} />

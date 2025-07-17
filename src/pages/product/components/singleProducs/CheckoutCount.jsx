@@ -22,6 +22,8 @@ const CheckoutCount = ({ singleProduct }) => {
     navigate("/cart");
   };
 
+
+
   return (
     <>
       <div>

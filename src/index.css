@@ -130,10 +130,12 @@
   border: none !important;
 }
 
-.custom-form .ant-form-item-row {
+/* .custom-form .ant-form-item-row {
   flex-direction: column !important;
+  margin-bottom: 50px !important;
 }
 
 .custom-form .ant-form-item-label {
   text-align: start !important;
-}
+} */
+
