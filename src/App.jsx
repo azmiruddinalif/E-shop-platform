@@ -14,6 +14,7 @@ import Home from "./pages/home";
 import Product from "./pages/product";
 import SingleProducts from "./pages/product/components/singleProducs";
 import Registration from "./pages/registration";
+import UserProfile from "./pages/profile";
 
 function App() {
   // router initialize
@@ -22,6 +23,7 @@ function App() {
       <Route>
         <Route element={<RootLayout />}>
           <Route path="/sign-up" element={<Registration />} />
+          <Route path="/user-profile" element={<UserProfile />} />
           <Route path="/" element={<Home />} />
           <Route path="/product" element={<Product />} />
           <Route path="/product/:id" element={<SingleProducts />} />
